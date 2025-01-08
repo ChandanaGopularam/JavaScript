@@ -1,0 +1,68 @@
+	JAVA SCRIPT OPERATIONS:
+1.	Arithmetic Operations:
+•	Multiplication (*)
+•	Division (/, Q)
+•	Modulus Operation (%, Remainder)
+•	Exponential (raised to the power)- **, ++, --
+•	Ex: let a=4
+        let b=5
+        a++
+        b--
+        document.write(a,"<br>")
+        document.write(b,"<br>")
+        document.write(a*a,"<br>")
+        document.write(a**a,"<br>")
+        document.write(a/a,"<br>")
+        document.write(a%a)
+
+2.	Assignment Operators:
+•	=
+•	+=
+•	-=
+•	Ex: let a=4
+        let b=5
+        a+=30
+        b-=5
+        document.write(a,"<br>")
+        document.write(b)
+
+3.	Logical Operators:
+•	And (&)
+•	Or (|)
+•	Not (!)
+•	Ex:  let a=4
+        let b=5
+        document.write(a>b && a>12,"<br>")
+        document.write(a>b || a>12,"<br>")
+        document.write(!(a>12))
+
+4.	Relational Operators:
+-They are also called as Comparison Operators.
+•	== (Checks only the Value)
+•	=== (Checks both Value and Datatype)
+•	!=
+•	!==
+•	<, <=
+•	>, >=
+•	Ex: let c=7
+        let d="7"
+        document.write(c==d,"<br>")
+        document.write(c!=d,"<br>")
+        document.write(c===d,"<br>")
+        document.write(c!==d,"<br>")
+        document.write(c>=d,"<br>")
+        document.write(c<=d,"<br>")
+        document.write(c>d,"<br>")
+        document.write(c<d)
+
+
+5.	Conditional Operator:
+-It is also known as Ternary Operator.
+•	Condition? True: False
+•	Ex: let t=40
+        let r=(t>40)?'Open':'Close'
+        document.write(r)
+
+	WINDOWS METHODS:
+•	Prompt (By default it is considered as STRING)
+•	Alert
