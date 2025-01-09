@@ -1,0 +1,44 @@
+	CONDITIONAL STATEMENTS:
+-To make the set of instructions (Block of code/Conditional block) execute only when the given condition is True.
+-Used to decide whether the code has to be executed or skipped based on the given condition.
+-Line to line (Sequence)
+Block Of Code: 
+-Set of Instructions.
+-It will execute only when that specific condition is True.
+Condition: An expression that evaluates a result. (True or False)
+	Ex: Console.log(5>6)
+	Methods:
+1.	If:
+•	Only one possible condition.
+•	If the condition is True, it will execute otherwise it skips.
+•	Ex:  let a=1
+        let b=3
+        if (a<b){
+            document.write("Hi,Welcome to India ","<br>")
+        }
+        document.write("Thankyou")
+
+2.	If-Else:
+•	Ex:  let a=1
+        let b=3
+        if (a>b){
+            document.write("Hi, Welcome to India!","<br>")
+        }else{
+            document.write("Hi, Welcome to SriLanka!","<br>")
+        }
+        document.write("Thankyou")
+
+3.	Else if:
+•	Ex:  name=prompt("Enter name:")
+        age=prompt("Enter age:",)
+        if(age<18){
+            alert(name+" You are too young to marry")
+        }else if(age>35){
+            alert(name+" You are too old to marry")
+        }else{
+            alert(name+" Perfect age to marry")
+        }
+        alert("Thankyou")
+
+4.	Switch
+5.	Ternary Operator
