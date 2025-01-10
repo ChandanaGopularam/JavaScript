@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //divisible by 2,3 and both
+        let a=parseInt(prompt("Enter a number:"))
+        if(a%2==0 && a%3==0){
+            document.write("divided by both")
+        }else if(a%3==0){
+            document.write("divided by 3")
+        }else if(a%2==0 ){
+            document.write("divided by 2")
+        }else{
+            document.write("cant divide.")
+        }
+
+
+        //largest number among 3 numbers
+        let x=parseInt(prompt("Enter a number for x:"))
+        let y=parseInt(prompt("Enter a number for y:"))
+        let z=parseInt(prompt("Enter a number for z:"))
+        document.write(`x=${x}`,"<br>")
+        document.write(`y=${y}`,"<br>")
+        document.write(`z=${z}`,"<br>")
+        if(x>y && x>z){
+            document.write(`x=${x} is the largest number`)
+        }else if(y>z && y>x){
+            document.write(`y=${y} is the largest number`)
+        }else if(z>x && z>y) { 
+            document.write(`z=${z} is the largest number`)
+        }else {
+            document.write("No largest number all are equal")
+        }
+
+
+        //Eligible to write exams if percentage is above 75%
+        let working_days=parseInt(prompt("Total number of working days:"))
+        let absent_days=parseInt(prompt("Total number of days for absent:"))
+        document.write(`working_days=${working_days}`,"<br>")
+        document.write(`absent_days=${absent_days}`,"<br>")
+        let total_presentDays=working_days-absent_days
+        let percentage=(total_presentDays/working_days)*100
+        if (percentage >75){
+            document.write("Student is eligible to write exam")
+        }else{
+            document.write("Student is not eligible to write exam")
+        }
+
+    </script>
+</body>
+</html>
