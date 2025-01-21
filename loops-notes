@@ -1,0 +1,34 @@
+	LOOPS:
+-Used to execute Block of Code multiple times.
+-Types of Loops:
+•	For loop:
+-for (initialization; condition; update-expression) {
+	//Block of code
+}
+
+•	For in:
+-const s= “…..”
+for (let i in s) {
+	//block of code
+}
+•	For of:
+- const s= “…..”
+for (let i of s) {
+	//block of code
+}
+•	While loop:
+-while (condition) {
+	//block of code
+}
+•	Do while:
+-Even when the condition is false the do while loop executes once.
+-do {
+	//block of code
+} while (condition)
+
+	BREAK:
+-When it matches it stops.
+	CONTINUE:
+-If it matches to the condition only that value is skipped and remaining is continued.
+
+
