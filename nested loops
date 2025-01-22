@@ -1,0 +1,17 @@
+	NESTED LOOPS:
+-Loop inside a loop/another loop.
+-The inner loop will execute one time for each iteration of outer loop.
+-An inner loop within the repeating block of the outer loop.
+-Ex: //outer loop
+        For (let i=1; i<=3; i++) {
+            document.write(i,"<br>");
+            //inner loop
+            For (let j=1; j<=4; j++) {
+                document.write(j,"");
+            }
+            document.write("<br>")
+        }
+
+
+
+
