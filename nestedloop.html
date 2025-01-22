@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //nested loops
+        //outer loop
+        for(let i=1;i<=3;i++){
+            document.write(i,"<br>");
+            //inner loop
+            for(let j=1;j<=4;j++){
+                document.write(j,"");
+            }
+            document.write("<br>")
+        }
+
+        //patterns
+        //right angle triangle
+        for(let p=1;p<=5;p++){
+            for(let q=1;q<=p;q++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+
+        //inverted right angle triangle
+        for(let k=1;k<=5;k++){
+            for(let l=1;l<=5-k;l++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        
+        //pyramid
+        let n=5;
+        for(let i=1;i<=n;i++){
+            for(let j=1;j<=n-i;j++){
+                document.write("&nbsp;&nbsp;")
+            }
+            for(let j=1;j<=2*i-1;j++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+            
+    </script>
+</body>
+</html>
