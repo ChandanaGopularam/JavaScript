@@ -1,0 +1,13 @@
+	FUNCTIONS:
+-A function is a reusable block of code.
+-It can be called anywhere in the program.
+-You can use the same code with different arguments to get the results.
+-In js we declare the function by using “function functionName()”.
+	Function = Key word
+	Parameters = values (Variable=used to store the data) which are declared inside the parenthesis () while defining a function.
+	Arguments = values which are passes through the parameters. 
+	Reusable Code: Using an existing code without writing it every time we need it.
+Anonymous Function:
+-A function without name, after we create a function without name and we assign it to a variable.
+Return Function:
+-The return statement can be used to return the value to the function call.
