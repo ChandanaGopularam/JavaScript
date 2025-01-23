@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //functions
+        function greet(){
+            console.log("Hello students")
+        }
+        greet()
+        console.log("Good Morning")
+        greet()
+        console.log("Good evening")
+
+        //functions with parameters
+        function g(name){
+            document.write("Hello "+name)
+        }
+        let name=prompt("Entr your name:")
+        g(name)
+
+        //function to add two numbers
+        function add(a,b){
+            let c=a+b
+            return c
+        }
+        let a1=parseFloat(prompt("Enter first number:"))
+        let b1=parseFloat(prompt("Enter second number:"))
+        let result=add(a1,b1)
+        console.log("Sum is: "+result)
+    </script>
+</body>
+</html>
