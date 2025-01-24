@@ -1,0 +1,80 @@
+Arrow Functions:
+	-Es6 version.
+	-more readable and more structured.
+	-anonymous functions (lambda functions).
+	-without function name but they are assigned to a variable.
+	-Ex1: Arrow functions without parameters.
+             let c=()=>{
+            	console.log("Hello")
+              }
+              c()
+	-Ex2: Arrow functions with parameters.
+	let a=(x,y)=>{
+            	console.log(x+y)
+             }
+             a(10,20)
+             a(20,30)
+	-Ex3: Arrow functions with one argument without using parenthesis.
+	 let greet=x=>console.log(x)
+             greet("Hello")
+	-Ex4: Arrow functions without argument.
+	let greets=x=>console.log(“Hello)
+            greets()
+	-Ex5: Arrow functions as an expression.
+	let age=18
+            let welcome=(age<18)?
+            ()=>console.log("Hi gowtham"):
+            ()=>console.log("Hi sai")
+            welcome()
+
+	SYNCRONOUS AND ASYNCHRONOUS FUNCTIONS:
+Synchronous functions:
+-Step by step.
+-One task.
+-Ex: function task1(){
+            console.log("Task1:Start")
+        }
+        function task2(){
+            console.log("Task1:Start")
+        }
+        function task3(){
+            console.log("Task1:Start")
+        }
+        task1()
+        task2()
+        task3()
+        Asynchronous function:
+	-Multiple tasks at a time.
+	-Ex: console.log("Hi")
+        	        setTimeout(()=>{
+            	console.log("Good Morning!")
+        	        },5000);
+        	        console.log("Thankyou")
+
+	JAVASCRIPT CALLBACKS:
+-A callback function is a function that is passed as argument to another function.
+-Ex: function greeting(name,callback){
+            console.log(`Hello, ${name}!`)
+            callback()
+            //this calls the callback function after greeting
+        }
+        function sayGoodbye(){
+            console.log("Goodbye")
+        }
+        //call greeting and pass sayGoodbye as the callback
+        greeting("Sam",sayGoodbye)
+
+	PROMISE:
+      -Three states:
+o	Pending: Still nor completed and continuing.
+o	Fulfilled: Task completed.
+o	Rejected: The operation is failed.
+-Ex: let myPromise=new Promise((resolve,reject)=>{
+            let success=true
+            if (success){
+                resolve("Task Completed")
+            }else{
+                reject("Task Failed")
+            }
+        })
+
