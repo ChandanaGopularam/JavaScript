@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Callback function
+        function mainfunction(callback){
+            console.log("Exceuting main function")
+            callback()
+        }
+        function callbackfunction(){
+            console.log("callback function executed")
+        }
+        mainfunction(callbackfunction)
+
+        //Passing a named function as a callback
+        function greet(name,callback){
+            console.log("hello "+name)
+            callback()
+        }
+        function goodbye(){
+            console.log("Goodbye!")
+        }
+        greet("Sam",goodbye)
+
+        //Using an anonymous function as a callback
+        function greeting(name,callback){
+            console.log("hello "+name)
+            callback() //executes the call back function after greet
+        }
+        greeting("Sam",function(){
+            console.log("Goodbye!")
+        }) //anonymous function as a callback
+
+        //Asynchronous callback with setTimeout
+        function fetchData(callback){
+            console.log("Fetching data...")
+            setTimeout(function(){
+                console.log("Data fetched")
+                callback()
+            },2000)
+        }
+        function processData(){
+            console.log("Processing the fetched data...")
+        }
+        fetchData(processData)
+
+        //Using a callback with array methods (MAP)
+        const numbers=[1,2,3,4,5]
+        const d=numbers.map(function(num){
+            return num*2
+        })
+        console.log(d)
+
+        //User registration Scenario based
+        function registerUser(username,email,callback){
+            console.log("Registering user "+ username)
+            setTimeout(function(){
+                console.log("User "+ username + " registered successfully.")
+                callback(email)
+            },2000)
+        }
+        function sendWelcomEmail(email){
+            console.log("Sending welcome Email to "+email)
+        }
+        registerUser("Harsh","Harsh123@gmail.com",sendWelcomEmail)
+    </script>
+</body>
+</html>
