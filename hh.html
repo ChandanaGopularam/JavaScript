@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Getting an Element by Id
+    <h1 id="a">I am ravi</h1>
+    <h1 id="b"]>I am sam</h1>
+    <h1 id="c">I am sanvi</h1>
+    <script>
+        let x=document.getElementById("a")
+        console.log(x)
+    </script> -->
+
+    <!-- Getting an Element by Class name
+    <h1 id="a" class="a">I am ravi</h1>
+    <h1 id="b" class="b">I am sam</h1>
+    <h1 id="c" class="c">I am sanvi</h1>
+    <h1 id="a" class="a">I am kavya</h1>
+    <script>
+        let x=document.getElementsByClassName("a")
+        console.log(x)
+    </script> -->
+
+    <!-- Getting an Element by Tag name
+    <h1 id="a" class="a">I am ravi</h1>
+    <h1 id="b" class="b">I am sam</h1>
+    <h1 id="c" class="c">I am sanvi</h1>
+    <h1 class="a">I am kavya</h1>
+    <script>
+        let x=document.getElementsByTagName('h1')
+        console.log(x)
+        for(let i=0;i<x.length;i++){
+            console.log(x[i])
+        }
+    </script> -->
+
+    <!-- Getting an Element by Query Selector
+    <h1 id="aa" class="a">I am ravi</h1>
+    <h1 id="b" class="b">I am sam</h1>
+    <h1 id="c" class="c">I am sanvi</h1>
+    <h1 class="a">I am kavya</h1>
+    <script>
+        let x=document.querySelector("a")
+        console.log(x)
+    </script> -->
+
+    <!-- Getting an Element by QuerySelectorAll 
+    <h1 id="aa" class="a">I am ravi</h1>
+    <h1 id="b" class="b">I am sam</h1>
+    <h1 id="c" class="c">I am sanvi</h1>
+    <h1 class="a">I am kavya</h1>
+    <script>
+        let x=document.querySelectorAll("a")
+        console.log(x)
+    </script> -->
+
+    <!-- To create HTML element
+    <script>
+        let t=document.createElement("h2")
+        t.className="tt"
+        t.textContent="Hello World"
+        console.log(t)
+        document.body.appendChild(t)
+    </script> -->
+
+    <!-- To create multiple HTML elements
+    <script>
+        const t=['harshini','pavani','rohini']
+        for(let i=0;i<length;i++){
+            let tt=document.createElement("h1")
+            tt.className="a"
+            tt.textContent=t[i]
+            console.log(t[i])
+            document.body.appendChild(t[i])
+        }
+    </script> -->
+</body>
+</html>
