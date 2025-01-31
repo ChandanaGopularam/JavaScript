@@ -1,0 +1,66 @@
+InsertBefore():
+-It inserts a new node before an existing node or child node of a specific parent node.
+-This requires a reference to both and the existing node you want to insert before.
+-Ex1:<div id="a"> 
+        <h1>sia</h1>
+        <h1 id="r">ria</h1>
+    </div>
+    <div id="b">
+        <h1>ram</h1>
+        <h1>sam</h1>
+    </div>
+    <script>
+        let n=document.createElement("h2")
+        n.textContent="Rahul"
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l)
+        console.log(p)
+    </script>
+-Ex2:<div id="a"> 
+        <h1 id="c">sia</h1>
+        <h1 id="r">ria</h1>
+    </div>
+    <div id="b">
+        <h1>ram</h1>
+        <h1>sam</h1>
+    </div>
+    <script>
+        let nc=document.createElement("h1")
+        nc.innerText="Chandana"
+        let pc=document.getElementById('a')
+        let lc=document.getElementById('c')
+        pc.insertBefore(nc,lc)
+        console.log(pc)
+
+        let n=document.createElement("h2")
+        n.innerText="Rahul"
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l)
+        console.log(p)
+    </script>
+To remove an element:
+-Ex:let b=documnet.getElementById("b")
+        b.remove()
+To remove a child element:
+-Ex: :<div id="a"> 
+        <h1 id="c">sia</h1>
+        <h1 id="re">ria</h1>
+    </div>
+    <div id="b">
+        <h1>ram</h1>
+        <h1>sam</h1>
+    </div>
+<script>
+        let n=document.getElementById("a")
+        let l=document.getElementById("re")
+        console.log(l)
+        n.removeChild(l)
+    </script>
+To replace an child element:
+-Ex: let n=document.createElement("h1")
+        n.innerText="Version it"
+        let p=document.getElementById("a")
+        p.replaceChilderen(n)
+        console.log(p)
