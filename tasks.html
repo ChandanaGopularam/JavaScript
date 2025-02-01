@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //***Voting Eligibility System***
+        let age=parseInt(prompt("Enter the age:"))
+        let citizen=prompt("Are you a citizen or not?")
+        let test=prompt("Taken test(Yes/no)?")
+        if(age>=18 && citizen=="yes" || test=="yes"){
+            document.write("The person is eligible for vote")
+        }else{
+            document.write("The person is not  eligible for vote")
+        }
+
+        //***Discount Eligibility***
+        let spends=parseInt(prompt("Enter the amount spent:"))
+        let isPremium=prompt("premiun memeber?")=="yes"
+        let discount=0
+        if(spends>100){
+            discount=20
+        }else if(spends<50){
+            discount=10
+        }
+        if(isPremium){
+            discount+=5
+        }
+        document.write('The customer is eligible for '+discount+'% discount')
+    </script>
+</body>
+</html>
