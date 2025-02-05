@@ -1,0 +1,77 @@
+To create an element by react.js:
+-React.createElement(“hi”)
+-Syntax:
+•	React.createElement(type, prop)
+			-Type: tag name(div,h1,p)
+			-props: classname, id, onClick.
+
+To display the element:
+-ReactDOM.createRoot()
+-ReactDOM.render()
+-Syntax:
+	-Reactelemnet: what to render
+	-Container: where to render
+
+Intro to JSX:
+-JavaScript XML (JSX) is a syntax extension for JS in react.js.
+-It allows us to write html code in React.
+-Make us easier to write html in react.
+
+o	JSX: JSX code gets complied into JS.
+o	Babel: A tool converts html code into JS.
+	While using babel all the html tags must be closed.
+With JSX:
+-Ex: <div id="app"></div>
+        <script type="text/babel">
+        	 const element=<h1 classname="a">Hello JSX!</h1>
+       	 const root=ReactDOM.createRoot(document.getElementById('app'))
+       	 root.render(element)
+        </script>
+Without JSX:
+-Ex:<div id="app"></div>
+       <script type="text/babel">
+       	 const element=React.createElement('h1',{classname:"a"},"Hello JSX!")
+       	 const root=ReactDOM.createRoot(document.getElementById('app'))
+       	 root.render(element)
+       </script>
+Using a call function:
+-You can call the function call directly within the JSX expression.
+-Ex: <div id="a"></div>
+        <script type="text/babel">
+        function getGreeting(name){ 
+        return `Hello,${name}!Welcome to React`
+    }
+    function Greeting(){
+    const name="Sam"
+    return <h1>{getGreeting(name)}</h1>
+    }
+    const root=ReactDOM.createRoot(document.getElementById('a'));
+    root.render(</Greeting>)
+    </script>
+
+Expressions:
+-Ex: <div id="app"></div>
+        <script type="text/babel">
+      	  const n=10;
+      	  const m=<h2>React is {n*2} times better than jsx</h2>
+       	  const root=ReactDOM.createRoot(document.getElementById('app'))
+       	 root.render(m)
+         </script>
+
+Conditional Rendering:
+-Ex:<div id="app"></div>
+    <script type="text/babel">
+        const App=()=>{
+            const isLoggedIn=false;
+            return(
+                <div>
+                    {isLoggedIn?(<h1>Welcome back user!</h1>):(<h1>Please log in.</h1>)}
+                    {isLoggedIn &&<h2>You have new notification</h2>}
+                </div>
+            );
+        };
+        const root=ReactDOM.createRoot(document.getElementById('app'))
+        root.render(<App/>)
+    </script>
+
+
