@@ -1,0 +1,42 @@
+	Create React App:
+•	npx-create-react-my-app
+•	cs my-app
+•	npm start
+Project folder:
+	Public/index.html: The main html file that serves as the entry point for the app.
+	src/index.js: The JavaScript entry point for the react app where the DOM is rendered.
+	src/App.js: The main component that serves as the root of the component tree.
+	src/components: The folder to store reusable components. 
+
+1)	Components: 
+-Components are the core building blocks of a react application.
+-They help to create reusable block of code.
+-If anything goes wrong in UI, it is very easy to find out and solve that.
+-Types: *Class Components
+	       *Function Components
+-Ex: Components are reusable.
+Welcome.js:
+	import React from "react";
+const Welcome=(props)=>{
+    	const{name,greeting}=props;
+    	return(
+        <h1 className="message">{greeting}{name}.</h1>
+    )
+}
+export default Welcome;
+
+App.js:
+	import React from 'react';
+//import './App.css';
+import Welcome from './Welcome';
+const App=()=>{
+  	return(
+    <div style={{textAlign:'center',color:'green'}}>
+    <Welcome name='Rahul' greeting='Hello!!'/>
+    <Welcome name='Ria' greeting='Hi!!'/>
+    </div>
+  )
+}
+export default App;
+
+
