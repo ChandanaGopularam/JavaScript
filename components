@@ -1,0 +1,52 @@
+         Greetings.js:
+         import React from "react";
+         function Greetings({isLoggedIn}){
+         if(isLoggedIn){
+         return <h1>Welcome User</h1>
+         }else {
+        	return <h1>Please Login</h1>
+             }
+         }
+         export default Greetings;
+
+         App.js:
+         import React from 'react';
+         import Greetings from './Components/Greetings';
+         function App(){
+         const isLoggedIn=true;
+         return(
+    	<div className='App'>
+      	<Greetings isLoggedIn={isLoggedIn}/>
+    	</div>
+             )
+        }
+        export default App;
+
+Lists and keys:
+-In React, a list is a collection of items you want to show on screen.
+- Keys: Keys in react helps us to keep the track of items in a list.
+-React know which items you have changed and updated.
+
+-Map(): Elements in array.
+-Function will be applied to all elements.
+Const n = [1,2,3,4,5]
+Const d = m.map(num=>num*2)
+Console.log(d)
+# 2, 4, 6, 8, 10
+
+fruitList.js:
+import React from "react";
+const fruitList=()=>{
+    const fruits = ['kiwi','berry','banana','guava'];
+    return(
+      <div>
+        <h1>Fruits List</h1>
+        <ul>
+          {fruits.map((fruits,index)=>(
+            <li key = {index}>{fruits}</li>
+          ))}
+        </ul>
+      </div>
+    )
+}
+export default fruitList;
