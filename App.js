@@ -1,28 +1,39 @@
-import React,{useState} from 'react';
-//counter component
-// const Counter=()=>{
-//   const[count,setCount]=useState(0);
-//   return(
-//     <div>
-//       <h1>{count}</h1>
-//       <button onClick={()=>setCount(count+1)}>Increment</button>
-//       <button onClick={()=>setCount(count-1)}>Decrement</button>
-//     </div>
-//   )
-// }
-// export default Counter;
-
-const ThemeToggler=()=>{
-  const[theme,setTheme]=useState('light')
-  const togglerTheme=()=>{
-    setTheme(prevTheme=>(prevTheme=='light'?'dark':'light'))
-  }
-  return(
-    <div style={{backgroundColor:theme=='light'?'white':'black',color:theme=='light'?'black':'white',textAlign:'center'}}>
-      <h1> The Current Theme is {theme}</h1>
-      <button onClick={togglerTheme}>togglerTheme</button>
-
-    </div>
-  )
+import React,{createContext,useContext} from "react";
+//import Props from "./components/props";
+//create context to hold the data
+const DataContext=createContext()
+function App() {
+  const data = "Hello I am Chandana";
+  return (<div>
+    <DataContext.Provider value={data}>
+      <User1/>
+    </DataContext.Provider>
+   </div> 
+  );
 }
-export default ThemeToggler;
+
+// User1 component
+function User1({ data }) {
+  return <User2 data={data} />;
+}
+
+// User2 component
+function User2({ data }) {
+  return <User3 data={data} />;
+}
+
+// User3 component
+function User3({ data }) {
+  return <User4 data={data} />;
+}
+
+// User4 component
+function User4({ data }) {
+  
+    const data1=useContext(DataContext);
+    return(
+      <div>{data1}</div>
+  );
+}
+
+export default App;
