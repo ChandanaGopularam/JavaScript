@@ -1,0 +1,61 @@
+	REACT REDUCER():
+-A Reducer is a function that helps to update (like score, a list) based on action we take.
+Current State: The current value of a state.
+Action
+-Ex:
+Action: add or remove an item
+State: initial value (3items)
+                  App.js:
+import React,{useReducer} from 'react';
+function appleRducer(state=3,action){
+  switch(action.type){
+    case 'ADD_APPLE':
+      return state+1;
+    case 'EAT_APPLE':
+      return state-1;
+    default:
+      return state;
+  }
+}
+function App(){
+  const [state,dispatch]=useReducer(appleRducer);
+  return(
+    <div style={{padding:'20px'}}>
+      <h1>Apple Counter</h1>
+      <p>Number of Apples:{state}</p>
+      <button onClick={()=>dispatch({type:'ADD_APPLE'})}>ADD APPLE</button>
+      <button onClick={()=>dispatch({type:'EAT_APPLE'})}>EAT APPLE</button>
+    </div>
+  )
+}
+export default App;
+
+	CALLBACK IN REACT:
+
+App.js:
+import React , {useState}from 'react';
+import Child from './Components/Child';
+const Parent=()=>{
+  const[message , setMessage]=useState('Hello World');
+  const changeMessage=()=>{
+    setMessage("You clicked the button")
+  };
+  return(
+    <div>
+      <h1>{message}</h1>
+      {/*passing the change message function as a prop to the child */}
+      <Child changeMessage={changeMessage}/>
+    </div>
+  )
+}
+export default Parent;
+
+Child.js:
+import React from "react";
+const Child=({changeMessage})=>{
+    return(
+        <button onClick={changeMessage}> Click Me </button>
+
+    )
+}
+export default Child;
