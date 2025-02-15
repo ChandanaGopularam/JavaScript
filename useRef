@@ -1,0 +1,26 @@
+-->useState: Change the state; React will render the component and update the UI with the new element.
+-->useRef: Changing the value by using useRef doesnot re-render; stay the same even the value is updated.
+-->useRef: When you change the value stored in ref.current it doesnot make the component render. This is useful when you need to store values or interact with Dom elements without extra renders. 
+
+Commonly used:
+1)Accessing a Dom element: Like scrolling to screen, Focusing the input.
+2)Storing values: It keeps track of values that don’t need to update in the UI but need to remember the previous state.
+
+App.js:
+import React, {useState, useEffect, useRef} from 'react';
+function CounterWithPrev(){
+    const [count, setCount] = useState(0);
+    const prevCount = useRef();
+    //create a ref to store the previous value
+    useEffect(()=>{
+        prevCount.current = count;
+    }, [count])
+    return(
+        <div>
+            <p>Current Counter: {count}</p>
+            <p>prevCount: {prevCount.current}</p>
+            <button onClick={()=>setCount(count+1)}>Increment</button>
+        </div>
+    )
+}
+export default CounterWithPrev;
