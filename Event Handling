@@ -1,0 +1,74 @@
+	Event Handling in React:
+Event handling in react is how you make your app do something when the user interacts with it, like clicking a button, submitting a form etc.,
+1) Clicking a button (onClick)
+2) Pressing a button (keyDown)
+3) Moving a mouse (OnMouseMove)
+4) Type a text box (onChange)
+
+How to use Events in React:
+	-Use camelCase for event names.
+	-Pass a function to the event (not to a function call).
+	-This function will run when the event happens.
+a) Click Event (Onclick):
+-Ex: 
+App.js
+function App(){
+    const handleClick=()=>{
+        alert("Button Clicked")
+    };
+    return(
+        <button onClick={handleClick}>Click</button>
+    )
+}
+export default App;
+
+b) Change Event (onChange):
+-This happens when you type in a text box.
+Key Points: 
+-Target: It is a property of the event object, and is predefined by JavaScript for DOM events.
+-event.target: It always refers to the element that trigger the event.
+- event.target.value: Used to access the value of input elements, buttons, form elements.
+-Ex:
+ App.js
+import {useState} from 'react'; 
+function App(){
+        const[text,setText]=useState("")
+        const handleChange=(event)=>{
+            setText(event.target.value)
+    }
+    return(
+        <div>
+        <input type='text' value={text} onChange={handleChange}></input>
+        <p>Your Text: {text}</p>
+        </div>
+    )
+}
+export default App;
+c) Mouse Events (onMouseEnter, onMouseLeave):
+-Ex:
+App.js
+import React,{useState} from 'react';
+function App(){
+    const[isHovered,setIsHovered]=useState(false);
+    const handleMouseEnter=()=>{
+        setIsHovered(true);
+    }
+    const handleMouseLeave=()=>{
+        setIsHovered(false);
+    }
+    return(
+        <div>
+            <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} 
+            style={{backgroundColor:'isHovered'?'Lightblue':'cadetblue',color:'isHovered'?'white':'blue'}}>Hover this</button>
+            {isHovered && <p> Mouse is over the button </p>}
+        </div>
+    )
+}
+export default App;
+
+d) Key Events (onKeyDown):
+-Key is pressed on the hey board.
+-Syntax:
+	onKeyDown={keyDownFunction}
+KeyDown function: This is a function that runs whenever any key is pressed on the key word.
+Return Type: It returns a key board Event object .
