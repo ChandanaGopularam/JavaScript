@@ -1,0 +1,12 @@
+Difference b/w Grid and Flex:
+FLEX:
+  -one directional
+  -flexible
+  -easy to work
+  -we have only limited tools
+  -by default an responsive webpage
+GRID:
+  -two directional
+  -complex but useful
+  -we have advanced tools also
+  -we can make grid responsive using some tool
